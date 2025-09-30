@@ -1,0 +1,31 @@
+/*
+code Force: Q_Digits
+Given a number N. Print the digits of that number from right to left separated by space
+For each test case print a single line contains the digits of the number separated by space.
+*/
+
+
+#include <stdio.h>
+int main()
+{
+    int t;
+    scanf("%d", &t);
+
+    while (t--)
+    {
+        int n;
+        scanf("%d", &n);
+        if (n == 0)
+        {
+            printf("0");
+        }
+        while (n != 0)
+        {
+            printf("%d ", n % 10); // 9 3
+            n /= 10;               // 3 0
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
